@@ -1,5 +1,5 @@
 const MyProjectPage = () => {
-  return <h1>Project</h1>;
+  return <h1>My Project</h1>;
 };
 
 export default MyProjectPage;
