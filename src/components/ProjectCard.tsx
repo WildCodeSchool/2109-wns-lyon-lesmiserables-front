@@ -1,5 +1,9 @@
-const ProjectCart = () => {
-  return <h1>Card</h1>;
+const ProjectCard = () => {
+  return (
+    <>
+      <h1>Card</h1>
+    </>
+  );
 };
 
-export default ProjectCart;
+export default ProjectCard;
