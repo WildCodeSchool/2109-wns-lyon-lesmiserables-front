@@ -3,7 +3,7 @@
 .card {
   margin: 20px;
   width: 300px;
-  height: 350px;
+  height: 360px;
   background-color: rgb(192, 190, 190);
   text-align: center;
   border: 1px solid black;
@@ -69,4 +69,11 @@
 }
 .card-description p {
   margin: 10px;
+}
+
+.card-bottom {
+  margin-left: 10px;
+  margin-right: 10px;
+  display: flex;
+  justify-content: space-between;
 }

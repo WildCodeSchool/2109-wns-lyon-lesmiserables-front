@@ -1,4 +1,5 @@
 import "../css/ProjectCard.css";
+import ProgressBar from "./ProgressBar";
 
 const ProjectCard = () => {
   return (
@@ -13,6 +14,10 @@ const ProjectCard = () => {
           <p>DESCRIPTION</p>
           <p>PROJECT MANAGER</p>
           <p>MEMBERS</p>
+        </div>
+        <div className="card-bottom">
+          <ProgressBar />
+          <p>14/09/2021</p>
         </div>
       </div>
     </>
