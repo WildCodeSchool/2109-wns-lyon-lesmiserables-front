@@ -4,11 +4,11 @@
   margin: 20px;
   width: 300px;
   height: 360px;
-  background-color: #ff9659;
+  background-color: #494674;
   text-align: center;
-  border: 1px solid rgb(116, 116, 116);
+  border: 2px solid #164231;
   border-radius: 5px;
-  box-shadow: 2px 2px 2px 2px rgb(145, 145, 145);
+  /* box-shadow: 2px 2px 2px 2px rgb(145, 145, 145); */
   transition: box-shadow 0.3s border 0.3s;
 }
 
@@ -30,7 +30,7 @@
   font-weight: 500;
   font-size: 25px;
   letter-spacing: 0.15px;
-  color: #ffffff;
+  color: rgb(214, 214, 214);
 }
 .card-top Button {
   padding: 0px;
@@ -40,22 +40,23 @@
   margin: auto;
   width: 280px;
   height: 270px;
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(40, 53, 71);
   text-align: left;
   border-radius: 5px;
-  border: 1px solid;
+  border: 2px solid #164231;
   overflow-y: scroll;
 }
 
 .text-title {
   margin: 10px;
+  color: rgb(214, 214, 214);
 }
 
 .text {
   margin: 0;
   padding-left: 10px;
   padding-right: 10px;
-  color: red;
+  color: rgb(131, 129, 129);
 }
 
 .card-bottom {
@@ -66,7 +67,7 @@
 }
 
 .card-bottom p {
-  color: rgb(255, 255, 255);
+  color: rgb(243, 243, 243);
   font-size: 20px;
 }
 

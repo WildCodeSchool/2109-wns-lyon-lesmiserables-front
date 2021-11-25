@@ -5,7 +5,8 @@
   -moz-osx-font-smoothing: grayscale;
 }
 body {
-  background-color: #ffffff;
+  background-color: #161e33;
+  color: rgb(214, 214, 214);
 }
 
 code {

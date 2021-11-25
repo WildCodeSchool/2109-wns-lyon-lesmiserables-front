@@ -12,7 +12,7 @@ const Header = (): JSX.Element => {
         </li>
         <li>
           <Link className="link" to="/Project">
-            Project
+            Projects
           </Link>
         </li>
         <li>

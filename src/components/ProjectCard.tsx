@@ -22,7 +22,7 @@ const ProjectCard = ({
             disableElevation
             variant="contained"
             size="small"
-            color="inherit"
+            color="primary"
           >
             <AddIcon />
           </Button>
