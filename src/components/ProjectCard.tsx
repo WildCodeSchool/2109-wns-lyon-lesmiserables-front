@@ -30,11 +30,15 @@ const ProjectCard = ({
         <div className="card-description">
           <div>
             <p className="text-title">DESCRIPTION</p>
-            <p className="text">{description}</p>
+            <p className="text" placeholder="New project">
+              {description}
+            </p>
           </div>
           <div>
             <p className="text-title">PROJECT MANAGER</p>
-            <p className="text">{projectManager}</p>
+            <p className="text" placeholder="John Doe">
+              {projectManager}
+            </p>
           </div>
           <div>
             <p className="text-title">MEMBERS</p>

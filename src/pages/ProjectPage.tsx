@@ -23,9 +23,10 @@ const ProjectPage = (): JSX.Element => {
         <Button variant="contained">ADD PROJECT</Button>
       </Box>
       <div className="cards-grid">
-        {randomData.map((data) => {
+        {randomData.map((data, index) => {
           return (
             <ProjectCard
+              key={index}
               projectName={data.projectName}
               description={data.description}
               projectManager={data.projectManager}
