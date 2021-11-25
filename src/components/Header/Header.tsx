@@ -1,26 +1,39 @@
 import { Link } from "react-router-dom";
+import "../../css/Header.css";
 
 const Header = (): JSX.Element => {
   return (
     <nav>
       <ul>
         <li>
-          <Link to="/">Home</Link>
+          <Link className="link" to="/">
+            Home
+          </Link>
         </li>
         <li>
-          <Link to="/SignUp">Sign Up</Link>
+          <Link className="link" to="/Project">
+            Project
+          </Link>
         </li>
         <li>
-          <Link to="/SignIn">Sign In</Link>
+          <Link className="link" to="/MyProject">
+            My Project
+          </Link>
         </li>
         <li>
-          <Link to="/Project">Project</Link>
+          <Link className="link" to="/Dashboard">
+            Dashboard
+          </Link>
         </li>
-        <li>
-          <Link to="/MyProject">My Project</Link>
+        <li className="right">
+          <Link className="link" to="/SignUp">
+            Sign Up
+          </Link>
         </li>
-        <li>
-          <Link to="/Dashboard">Dashboard</Link>
+        <li className="right">
+          <Link className="link" to="/SignIn">
+            Sign In
+          </Link>
         </li>
       </ul>
     </nav>

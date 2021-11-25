@@ -1,23 +1,57 @@
+import Button from "@mui/material/Button";
+import Box from "@mui/material/Box";
+import AddIcon from "@mui/icons-material/Add";
 import "../css/ProjectCard.css";
-import ProgressBar from "./ProgressBar";
+import LinearProgressWithLabel from "./LinearProgressWithLabel";
+import { ProjectCardProps } from "../interfaces";
 
-const ProjectCard = () => {
+const ProjectCard = ({
+  projectName,
+  description,
+  projectManager,
+  members,
+  progressBar,
+  creationDate,
+}: ProjectCardProps) => {
   return (
     <>
-      <h1>Card</h1>
       <div className="card">
         <div className="card-top">
-          <p className="project-title">Project name</p>
-          <button className="btn-project"> + </button>
+          <p className="project-title">{projectName}</p>
+          <Button
+            disableElevation
+            variant="contained"
+            size="small"
+            color="inherit"
+          >
+            <AddIcon />
+          </Button>
         </div>
         <div className="card-description">
-          <p>DESCRIPTION</p>
-          <p>PROJECT MANAGER</p>
-          <p>MEMBERS</p>
+          <div>
+            <p className="text-title">DESCRIPTION</p>
+            <p className="text">{description}</p>
+          </div>
+          <div>
+            <p className="text-title">PROJECT MANAGER</p>
+            <p className="text">{projectManager}</p>
+          </div>
+          <div>
+            <p className="text-title">MEMBERS</p>
+            {members.map((member, index) => {
+              return (
+                <li key={index} className="text">
+                  {member}
+                </li>
+              );
+            })}
+          </div>
         </div>
         <div className="card-bottom">
-          <ProgressBar />
-          <p>14/09/2021</p>
+          <Box sx={{ width: "100%" }}>
+            <LinearProgressWithLabel value={progressBar} />
+          </Box>
+          <p className="card-bottom-text">{creationDate}</p>
         </div>
       </div>
     </>
