@@ -1,10 +1,10 @@
 import { Routes, Route } from "react-router-dom";
-import HomePage from "../../pages/HomePage";
-import SignInPage from "../../pages/SignInPage";
-import SignUpPage from "../../pages/SignUpPage";
-import ProjectPage from "../../pages/ProjectPage";
-import MyProjectPage from "../../pages/MyProjectPage";
-import DashboardPage from "../../pages/DashboardPage";
+import HomePage from "./pages/HomePage";
+import SignInPage from "./pages/SignInPage";
+import SignUpPage from "./pages/SignUpPage";
+import ProjectPage from "./pages/ProjectPage";
+import MyProjectPage from "./pages/MyProjectPage";
+import DashboardPage from "./pages/DashboardPage";
 
 const HeaderRoutes = () => {
   return (

@@ -1,15 +1,13 @@
-import { BrowserRouter as Router } from "react-router-dom";
-import Header from "./components/Header/Header";
-import HeaderRoutes from "./components/Header/HeaderRoutes";
+import { BrowserRouter } from "react-router-dom";
+import Header from "./components/Header";
+import Router from "./Router";
 
 const App = (): JSX.Element => {
   return (
-    <Router>
-      <div>
-        <Header />
-        <HeaderRoutes />
-      </div>
-    </Router>
+    <BrowserRouter>
+      <Header />
+      <Router />
+    </BrowserRouter>
   );
 };
 
