@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+  client:
+    build: ./
+    ports:
+      - 3002:3000
+    volumes:
+      - ./src:/app/src
+      - ./public:/app/public
