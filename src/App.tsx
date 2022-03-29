@@ -1,14 +1,17 @@
-import { BrowserRouter } from "react-router-dom";
-import Header from "./components/Header";
-import Router from "./Router";
+import React, { FC, useState } from "react";
+import { Layout } from "antd";
 
-const App = (): JSX.Element => {
+
+import "./App.less";
+import SideNav from "./components/SideNav";
+import Router from "./config/Router";
+const { Content } = Layout;
+function App() {
   return (
-    <BrowserRouter>
-      <Header />
-      <Router />
-    </BrowserRouter>
+    <Layout style={{ height: "100vh" }}>
+        <Router />
+    </Layout>
   );
-};
+}
 
 export default App;
