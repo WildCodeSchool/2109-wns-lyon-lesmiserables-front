@@ -8,23 +8,13 @@ import {
 } from "@ant-design/icons";
 import { useSignup } from "../../../utils/store/user";
 import { useNavigate } from "react-router";
-interface singUpData {
-  email: string;
-  password: string;
-  username: string;
-  // id:number
-}
+import { useAuth } from "../../../utils/hooks/auth.hook";
+
 const SignUp = () => {
-  const signUp = useSignup();
+  const { register } = useAuth();
   const navigate = useNavigate();
-  const onFinish = async (data: singUpData) => {
-    const result = await signUp({
-      username: data.username,
-      email: data.email,
-      password: data.password,
-      // id: data.id
-    });
-    console.log("result", result);
+  const onFinish = async (data:any) => {
+   await register(data);
     navigate("/verify");
   };
 

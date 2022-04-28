@@ -8,7 +8,7 @@ interface State {
   rightPanelActive: boolean;
 }
 function Auth() {
-  const [rightPanelActive, setRightPanelActive] = useState<any>(false);
+  const [rightPanelActive, setRightPanelActive] = useState<boolean>(false);
   const navigate = useNavigate();
   const handleClickSignUpButton = () => {
     setRightPanelActive(true);

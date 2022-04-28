@@ -1,19 +1,15 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Form, Input, Button, Checkbox, Layout } from "antd";
 import { UserOutlined, LockOutlined,MailOutlined } from '@ant-design/icons';
-import { Navigate, useNavigate } from "react-router";
-import { GetUsers, useSignin } from "../../../utils/store/user";
-import { GetProjects } from "../../../utils/store/project";
+import { useNavigate } from "react-router";
+import { useAuth } from "../../../utils/hooks/auth.hook";
 
 const { Content } = Layout;
 
 const SignIn = (): JSX.Element => {
   const navigate = useNavigate();
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
-  const signIn = useSignin();
-
-  console.log("navigate");
-
+  const [failed, setFailed] = useState(false);
+  const { login } = useAuth();
   const onFinish = async ({
     email,
     password,
@@ -21,14 +17,8 @@ const SignIn = (): JSX.Element => {
     email: string;
     password: string;
   }) => {
-    const result = await signIn(email, password);
-    if (result.data.signIn.accessToken) {
-      localStorage.setItem("token", result.data.signIn.accessToken);
-      console.log("result", result.data.signIn.accessToken);
-      navigate("/dashboard", { replace: true });
-    } else {
-      setIsLoggedIn(false);
-    }
+    await login(email, password);
+    navigate("/home", { replace: true });
   };
 
   const onFinishFailed = (errorInfo: any) => {
@@ -37,7 +27,6 @@ const SignIn = (): JSX.Element => {
 
   return (
     <Content>
-      
       <div className="form-container sign-in-container">
         <Form
           name="basic"
