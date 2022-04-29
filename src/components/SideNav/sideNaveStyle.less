@@ -1,0 +1,53 @@
+.ant-layout-sider {
+    position: relative;
+    min-width: 0;
+    background: #2D62ED;
+    transition: all 0.2s;
+}
+.ant-layout-sider-trigger {
+    position: fixed;
+    bottom: 0;
+    z-index: 1;
+    height: 48px;
+    color: #fff;
+    line-height: 48px;
+    text-align: center;
+    background: #2D62ED;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+.ant-menu {
+    color: rgb(255 255 255 / 30%);
+    background: #2D62ED;
+    font-size: 16px;
+
+}
+.ant-menu-item a {
+    color: rgba(206, 206, 206);
+    
+}
+.ant-menu-item a:hover {
+    color: rgba(255, 255, 255, 0.85);
+}
+.ant-menu-light .ant-menu-item:hover, .ant-menu-light .ant-menu-item-active, .ant-menu-light .ant-menu:not(.ant-menu-inline) .ant-menu-submenu-open, .ant-menu-light .ant-menu-submenu-active, .ant-menu-light .ant-menu-submenu-title:hover {
+    color: white;
+}
+.ant-menu:not(.ant-menu-horizontal) .ant-menu-item-selected {
+    background-color: #2D62ED;
+    color: white !important;
+}
+.ant-menu-item-selected a, .ant-menu-item-selected a:hover {
+    color: #ffffff;
+}
+.ant-menu-inline .ant-menu-item::after {
+    right: unset;
+    left: 0 ;
+    border-right: 3px solid white;
+    content: '';
+}
+.ant-menu-inline {
+    border-right: 1px solid #2D62ED;
+}
+.ant-menu-item:active, .ant-menu-submenu-title:active {
+    background: #2D62ED;
+}
