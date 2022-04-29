@@ -8,5 +8,6 @@ RUN yarn
 COPY ./public ./public
 COPY ./src ./src
 COPY ./tsconfig.json ./
+COPY ./craco.config.js ./
 
 CMD yarn start

@@ -2,9 +2,14 @@ version: '3'
 
 services:
   client:
-    build: ./
-    ports:
-      - 3002:3000
+    # build: ./client
+    image: aminebenakil/mastermine-client
+    command: sh -c "npm run build"
     volumes:
-      - ./src:/app/src
-      - ./public:/app/public
+      - web-client-build:/app/build
+    environment:
+      - NODE_ENV=production
+  mongodb:
+    image: mongo:4.4.9
+volumes:
+  web-client-build:
